@@ -2,8 +2,9 @@
 
 import sys
 
+dict = {}
+
 for line in sys.stdin:
-    dict = {}
     for word in line.strip().split(' '):
         if word:
             if word in dict:
@@ -11,5 +12,5 @@ for line in sys.stdin:
             else:
                 dict[word] = 1
 
-    for k, v in dict.items():
-        print(str(k) + '\t' + str(v))
+for k, v in dict.items():
+    print(str(k) + '\t' + str(v))
